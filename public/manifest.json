@@ -1,6 +1,6 @@
 {
-  "name": "Next Boilerplate",
-  "short_name": "Boilerplate",
+  "name": "World Trips",
+  "short_name": "Wolrd Trips",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "theme_color": "#FFFFFF",
-  "description": "Boilerplate for NextJS projects",
+  "description": "Projeto para mostrar viagens pelo mundo.",
   "background_color": "#FFFFFF",
   "start_url": "/",
   "display": "standalone",
