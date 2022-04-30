@@ -1,7 +1,7 @@
 export function Main() {
   return (
     <main>
-      <h1>Next Boilerplate</h1>
+      <h1>Wolrd Trips</h1>
     </main>
   );
 }
