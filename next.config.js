@@ -10,6 +10,10 @@ const nextConfig = {
 
 module.exports = withPWA({
   ...nextConfig,
+  swcMinify: true,
+  experimental: {
+    styledComponents: true,
+  },
   pwa: {
     dest: 'public',
     disable: !isProduction,
