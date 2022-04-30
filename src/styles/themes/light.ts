@@ -7,6 +7,13 @@ export const lightTheme: DefaultTheme = {
     white: '#eeeeee',
   },
 
+  zIndexes: {
+    one: 1,
+    dropdown: 1000,
+    fixed: 1100,
+    modal: 1200,
+  },
+
   sizes: {
     small: '1.5rem',
     medium: '3rem',

@@ -8,6 +8,13 @@ declare module 'styled-components' {
       white: string;
     };
 
+    zIndexes: {
+      one: number;
+      dropdown: number;
+      fixed: number;
+      modal: number;
+    };
+
     sizes: {
       small: string;
       medium: string;
