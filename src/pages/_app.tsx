@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { GlobalStyle } from 'styles/global';
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -14,6 +16,8 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Boilerplate for NextJS projects" />
         <meta name="theme-color" content="#FFFFFF" />
       </Head>
+
+      <GlobalStyle />
 
       <Component {...pageProps} />
     </>
