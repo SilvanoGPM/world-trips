@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+
+import { renderComponentWithTheme } from 'utils/renderComponentTheme';
 
 import Map from '.';
 
 describe('<Map />', () => {
   test('should render wihout any marker', () => {
-    render(<Map />);
+    renderComponentWithTheme(<Map />);
 
     expect(
       screen.getByRole('link', {
@@ -34,7 +36,7 @@ describe('<Map />', () => {
       },
     };
 
-    render(<Map places={[place, placeTwo]} />);
+    renderComponentWithTheme(<Map places={[place, placeTwo]} />);
 
     expect(screen.getByTitle(/garanhuns/i)).toBeInTheDocument();
     expect(screen.getByTitle(/são paulo/i)).toBeInTheDocument();
