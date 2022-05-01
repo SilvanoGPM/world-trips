@@ -15,10 +15,20 @@ export function HomeTemplate({ places }: MapProps) {
       <NextSeo
         title="World Trips"
         description="Projeto para mostrar viagens pelo mundo."
+        canonical="https://world-trips.vercel.app/"
         openGraph={{
+          url: 'https://world-trips.vercel.app/',
           title: 'World Trips',
           description: 'Projeto para mostrar viagens pelo mundo.',
           site_name: 'World Trips',
+          images: [
+            {
+              url: 'https://world-trips.vercel.app/images/cover.png',
+              width: 1280,
+              height: 720,
+              alt: 'World Trips',
+            },
+          ],
         }}
       />
 
