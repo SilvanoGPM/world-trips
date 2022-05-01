@@ -17,6 +17,8 @@ export const Heading = styled.h1`
 `;
 
 export const Body = styled.div`
+  overflow: auto;
+
   p {
     font-size: ${({ theme }) => theme.sizes.medium};
     line-height: ${({ theme }) => theme.sizes.medium};
