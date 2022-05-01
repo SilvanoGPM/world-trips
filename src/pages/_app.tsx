@@ -5,12 +5,15 @@ import NextNProgress from 'nextjs-progressbar';
 
 import { GlobalStyle } from 'styles/global';
 import { lightTheme } from 'styles/themes/light';
+import { DefaultSeo } from 'next-seo';
+
+import SEO from '../../next-seo.config';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={lightTheme}>
       <Head>
-        <title>Wolrd Trips</title>
+        <title>World Trips</title>
 
         <link
           rel="apple-touch-icon"
@@ -99,6 +102,8 @@ function App({ Component, pageProps }: AppProps) {
           content="Projeto para mostrar viagens pelo mundo."
         />
       </Head>
+
+      <DefaultSeo {...SEO} />
 
       <GlobalStyle />
 

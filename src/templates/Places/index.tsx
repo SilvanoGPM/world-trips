@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
+import { NextSeo } from 'next-seo';
 
 import { LinkWrapper } from 'components/LinkWrapper';
 import * as S from './styles';
@@ -11,6 +12,7 @@ export type PlaceTemplateProps = {
     gallery: Array<{ url: string; width: number; height: number }>;
     description?: {
       html: string;
+      text: string;
     };
   };
 };
@@ -18,6 +20,23 @@ export type PlaceTemplateProps = {
 export function PlaceTemplate({ place }: PlaceTemplateProps) {
   return (
     <>
+      <NextSeo
+        title={`${place.name} - World Trips`}
+        description={place.description?.text}
+        openGraph={{
+          title: `${place.name} - World Trips`,
+          description: place.description?.text,
+          images: [
+            {
+              url: place.gallery[0].url,
+              width: place.gallery[0].width,
+              height: place.gallery[0].height,
+              alt: place.name,
+            },
+          ],
+        }}
+      />
+
       <LinkWrapper href="/">
         <CloseOutline size={32} aria-label="Back to home" />
       </LinkWrapper>
