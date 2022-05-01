@@ -1,6 +1,6 @@
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 
-type MapProps = {
+export type MapProps = {
   places?: PlaceType[];
 };
 

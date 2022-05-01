@@ -6,11 +6,11 @@ describe('<Map />', () => {
   test('should render wihout any marker', () => {
     render(<Map />);
 
-    const expected = screen.getByRole('link', {
-      name: /a javascript library for interactive maps/i,
-    });
-
-    expect(expected).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {
+        name: /a js library for interactive maps/i,
+      }),
+    ).toBeInTheDocument();
   });
 
   test('should render with the marker in correct place', () => {
