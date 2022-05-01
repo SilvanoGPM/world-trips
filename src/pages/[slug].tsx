@@ -5,11 +5,12 @@ import { PageTemplate, PageTemplateProps } from 'templates/Pages';
 import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries';
 import { GetPageBySlugQuery, GetPagesQuery } from 'graphql/generated/graphql';
 import client from 'graphql/client';
+import { FallbackLoading } from 'components/FallbackLoading';
 
 export default function Page({ heading, body }: PageTemplateProps) {
   const router = useRouter();
 
-  if (router.isFallback) return null;
+  if (router.isFallback) return <FallbackLoading />;
 
   return <PageTemplate heading={heading} body={body} />;
 }

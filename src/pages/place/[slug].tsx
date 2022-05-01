@@ -5,18 +5,19 @@ import client from 'graphql/client';
 import { GetPlacesQuery, GetPlaceBySlugQuery } from 'graphql/generated/graphql';
 import { GET_PLACES, GET_PLACE_BY_SLUG } from 'graphql/queries';
 import { PlaceTemplate, PlaceTemplateProps } from 'templates/Places';
+import { FallbackLoading } from 'components/FallbackLoading';
 
 export default function Place({ place }: PlaceTemplateProps) {
   const router = useRouter();
 
-  if (router.isFallback) return null;
+  if (router.isFallback) return <FallbackLoading />;
 
   return <PlaceTemplate place={place} />;
 }
 
 export async function getStaticPaths() {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES, {
-    first: 10,
+    first: 1,
   });
 
   const paths = places.map(({ slug }) => ({ params: { slug } }));
