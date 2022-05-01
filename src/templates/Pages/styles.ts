@@ -9,6 +9,7 @@ export const Content = styled.section`
   margin: auto;
   height: 100vh;
   max-width: ${({ theme }) => theme.sizes.container};
+  padding: ${({ theme }) => `0 ${theme.sizes.medium}`};
 `;
 
 export const Heading = styled.h1`
