@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import NextNProgress from 'nextjs-progressbar';
 
 import { GlobalStyle } from 'styles/global';
 import { lightTheme } from 'styles/themes/light';
@@ -30,6 +31,13 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <GlobalStyle />
+
+      <NextNProgress
+        color="#e20e8d"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
 
       <Component {...pageProps} />
     </ThemeProvider>
